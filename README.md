@@ -37,27 +37,27 @@ The files are saved as:
 
 ---
 
-## 🏗️ Installation & Setup
+## 🔧 Installation & Setup
 ### 1️⃣ Install Required Dependencies
 Ensure you have Python installed. Then, install the necessary packages:
 ```bash
 pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 googleapiclient openpyxl
 ```
 
+
 ### 2️⃣ Set Up Google Analytics API Access
 1. **Create a Google Cloud Project** and enable the **Google Analytics API**.
 2. **Generate Service Account Credentials:**
+   
    - Go to the **Google Cloud Console**.
    - Create a **Service Account** and download the JSON key file.
-3. **Grant Access:**
+     
+4. **Grant Access:**
    - In Google Analytics, go to **Admin > Account Settings** and add the service account email with **Read & Analyze** permission.
-4. **Set Up Credentials:**
-   - Save the downloaded JSON key file and set its path as an environment variable:
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your-key.json"
-   ```
-   Alternatively, update the script to reference your credentials file directly.
+5. **Set Up Credentials:**
+   - Save the JSON key file and keep it in the same folder/repository as your script.
 
+     
 ### 3️⃣ Run the Script
 Execute the script with default settings (last 30 days):
 ```bash
@@ -70,22 +70,16 @@ python main.py --start_date 2024-01-01 --end_date 2024-02-01
 
 ---
 
-## 🔍 How It Works (Step-by-Step)
+## 🔍 How It Works
 1. **Authenticate**: The script uses **OAuth 2.0** to authenticate with the Google Analytics API.
 2. **Fetch Data**: It queries **blog.izooto.com**'s GA4 data, retrieving session metrics, engagement rates, user counts, and total views.
 3. **Process Data**: The data is formatted into a structured **Pandas DataFrame**.
 4. **Export Data**: Saves the output as a **CSV** and **Excel** file.
 5. **Handle Errors & Logging**: Logs issues like API rate limits, missing data, or authentication failures.
-6. **(Optional) Auto-Download in Colab**: If running in Google Colab, files are automatically downloaded.
+
 
 ---
 
-## 📝 Additional Information
-- **Company:** This assignment was provided by **IZooto** as part of an assessment.
-- **Project ID:** `354503001`
-- **Service Account JSON File:** [Download Here](https://drive.google.com/file/d/1h6KvJ_0A76JIA-4N3OCF4bsEJ_ODOkQu/view?usp=drive_link)
-
----
 
 ## ❗ Troubleshooting
 ### 1️⃣ `ModuleNotFoundError: No module named 'openpyxl'`
@@ -93,9 +87,6 @@ python main.py --start_date 2024-01-01 --end_date 2024-02-01
   ```bash
   pip install openpyxl
   ```
-
-### 2️⃣ `google.auth.exceptions.DefaultCredentialsError`
-- Ensure the **GOOGLE_APPLICATION_CREDENTIALS** environment variable is correctly set.
 
 ### 3️⃣ `Quota Exceeded` or `403 Forbidden`
 - Check if your **Google Analytics API** usage quota is exceeded.
@@ -105,11 +96,7 @@ python main.py --start_date 2024-01-01 --end_date 2024-02-01
 
 ## 📌 Future Improvements
 - Add **Dashboard Visualization** for better insights.
-- Automate scheduled runs using **Cron Jobs**.
+- Automate scheduled runs.
 - Include **Email Notifications** for generated reports.
 
----
-
-## 📩 Contact & Support
-For any queries or issues, reach out to **IZooto Team** or create an issue in the repository.
 
