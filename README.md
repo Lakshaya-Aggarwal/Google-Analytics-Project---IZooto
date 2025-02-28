@@ -20,6 +20,17 @@ This project automates the process of fetching, processing, and exporting Google
 - **File Formats:** CSV, Excel
 
 ---
+## ▶️ How to Run the Project  
+
+
+- **Run with Default Settings (Last 30 Days):**
+```bash
+python main.py
+```
+- **Run with a Custom Date Range:**
+```bash
+python main.py --start_date 2024-01-01 --end_date 2024-02-01
+```
 
 ## 📊 Output Format
 The script generates structured reports in the following format:
@@ -32,8 +43,8 @@ The script generates structured reports in the following format:
 | 2025-01-29 | (direct) / (none) | India | Noida | 570 | 440 | 77.19 | 158 | 3234 |
 
 The files are saved as:
-- `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.csv`
-- `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.xlsx`
+- **CSV File:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.csv`
+- **Excel FIle:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.xlsx`
 
 ---
 
