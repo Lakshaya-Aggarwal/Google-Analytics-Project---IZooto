@@ -20,34 +20,6 @@ This project automates the process of fetching, processing, and exporting Google
 - **File Formats:** CSV, Excel
 
 ---
-## ▶️ How to Run the Project  
-
-
-- **Run with Default Settings (Last 30 Days):**
-```bash
-python main.py
-```
-- **Run with a Custom Date Range:**
-```bash
-python main.py --start_date 2024-01-01 --end_date 2024-02-01
-```
-
-## 📊 Output Format
-The script generates structured reports in the following format:
-
-| Date     | Source / Medium | Country | City  | Sessions | Engaged Sessions | Engagement Rate (%) | Total Users | Total Views |
-|----------|---------------|---------|------|----------|----------------|------------------|------------|------------|
-| 2025-02-17 | (direct) / (none) | India | Noida | 589 | 453 | 76.91 | 153 | 2889 |
-| 2025-01-28 | (direct) / (none) | India | Noida | 585 | 472 | 80.68 | 164 | 3665 |
-| 2025-02-25 | (direct) / (none) | India | Noida | 571 | 425 | 74.43 | 149 | 2859 |
-| 2025-01-29 | (direct) / (none) | India | Noida | 570 | 440 | 77.19 | 158 | 3234 |
-
-The files are saved as:
-- **CSV File:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.csv`
-- **Excel FIle:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.xlsx`
-
----
-
 ## 🔧 Installation & Setup
 ### 1️⃣ Install Required Dependencies
 Ensure you have Python installed. Then, install the necessary packages:
@@ -70,16 +42,36 @@ pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 googlea
 
      
 ### 3️⃣ Run the Script
-Execute the script with default settings (last 30 days):
+- **Run with Default Settings (Last 30 Days):**
 ```bash
 python main.py
 ```
-For a custom date range, specify start and end dates:
+- **Run with a Custom Date Range:**
 ```bash
 python main.py --start_date 2024-01-01 --end_date 2024-02-01
 ```
+---
+
+
+
+
+## 📊 Output Format
+The script generates structured reports in the following format:
+
+| Date     | Source / Medium | Country | City  | Sessions | Engaged Sessions | Engagement Rate (%) | Total Users | Total Views |
+|----------|---------------|---------|------|----------|----------------|------------------|------------|------------|
+| 2025-02-17 | (direct) / (none) | India | Noida | 589 | 453 | 76.91 | 153 | 2889 |
+| 2025-01-28 | (direct) / (none) | India | Noida | 585 | 472 | 80.68 | 164 | 3665 |
+| 2025-02-25 | (direct) / (none) | India | Noida | 571 | 425 | 74.43 | 149 | 2859 |
+| 2025-01-29 | (direct) / (none) | India | Noida | 570 | 440 | 77.19 | 158 | 3234 |
+
+The files are saved as:
+- **CSV File:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.csv`
+- **Excel FIle:** `ga_4_traffic_sources_YYYY_MM_DD_to_YYYY_MM_DD.xlsx`
 
 ---
+
+
 
 ## 🔍 How It Works
 1. **Authenticate**: The script uses **OAuth 2.0** to authenticate with the Google Analytics API.
