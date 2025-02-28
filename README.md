@@ -1,7 +1,10 @@
 # Automating Google Analytics Reports for Blog.izooto.com
 
+
 ## 📌 Project Overview
 This project automates the process of fetching, processing, and exporting Google Analytics data for the domain **blog.izooto.com**. The script connects to the **Google Analytics API**, retrieves traffic and performance metrics, and stores the data in structured CSV and Excel files. The automation ensures that data is consistently fetched, formatted, and ready for further analysis.
+
+---
 
 ## 🚀 Features
 - **Automated Data Retrieval:** Fetches performance metrics such as sessions, engaged sessions, engagement rate, total users, and total views.
