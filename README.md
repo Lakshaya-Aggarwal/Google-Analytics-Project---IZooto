@@ -49,10 +49,7 @@ pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 googlea
 ```bash
 python main.py
 ```
-- **Run with a Custom Date Range:**
-```bash
-python main.py --start_date 2024-01-01 --end_date 2024-02-01
-```
+
 ---
 
 
